@@ -1,6 +1,8 @@
 import { canGridVertical, canGridHorizontal } from "./canvas-grid.js";
 import { drawText } from "./text.js";
-const msg= "Space Battle"
+import { stickFigure } from "./stickFig.js";
+
+const msg = "Space Battle";
 const canvas = document.getElementById("space-battle"); 
 const context = canvas.getContext("2d"); 
 
@@ -11,41 +13,17 @@ context.rect(50, 50, canvas.width - 100, canvas.height - 100); // inner black bo
 context.stroke();
 context.fill(); // draw the fill the sq lines
 
-
+// add text 
 drawText();
+
 //stick figure
-context.strokeStyle = '#FFFFFF';
-context.lineWidth = 2;
-context.beginPath();
-context.arc(200, 140, 20, 0, Math.PI * 2);
-context.moveTo(200, 160);
-context.lineTo(200, 220);
-context.moveTo(180, 300);
-context.lineTo(185, 260);
-context.lineTo(200, 220);
-context.lineTo(215, 260);
-context.lineTo(220, 300);
-context.moveTo(240, 130);
-context.lineTo(225, 170);
-context.lineTo(200, 170);
-context.lineTo(175, 180);
-context.lineTo(170, 220);
-context.moveTo(220, 300);
-context.lineTo(240,300);
-context.moveTo(180, 300);
-context.lineTo(160, 300);
-context.stroke();
+stickFigure();
 
-
-
-
-// Grid drawingcodegoes here
+// Grid drawing code goes here
 context.strokeStyle = "#00FF00";
 context.lineWidth = 0.25;
-
 canGridVertical();
 canGridHorizontal();
-
 context.stroke();
 
 export{context, canvas, msg};

@@ -1,7 +1,6 @@
 import{context, msg} from './script.js';
 
 const drawText = () => {
-    // add text 
     context.font = "45px Sans-Serif";
     context.fillStyle = "blue"; 
     context.strokeStyle = 'green';
