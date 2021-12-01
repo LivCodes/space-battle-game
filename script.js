@@ -10,12 +10,8 @@ const context = canvas.getContext("2d");
 canvasShape(); //draw the canvas square
 drawText(); // add text
 stickFigure(); //stick figure
-
-// Grid drawing code goes here
-context.strokeStyle = "#00FF00";
-context.lineWidth = 0.25;
-canGridVertical();
-canGridHorizontal();
-context.stroke();
+canGridVertical(); // vertical grid lines
+canGridHorizontal(); // horizontal grid lines
+context.stroke(); // draws grid
 
 export{context, canvas, msg};
