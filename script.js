@@ -1,8 +1,9 @@
 import { canGridVertical, canGridHorizontal } from "./canvas-grid.js";
+import { drawText } from "./text.js";
 const msg= "Space Battle"
+const canvas = document.getElementById("space-battle"); 
+const context = canvas.getContext("2d"); 
 
-var canvas = document.getElementById("space-battle"); 
-var context = canvas.getContext("2d"); 
 context.strokeStyle = 'lightgrey'; // the border line
 context.fillStyle = 'black'; // fill the square
 context.lineWidth = 10; // width of the border line
@@ -10,13 +11,8 @@ context.rect(50, 50, canvas.width - 100, canvas.height - 100); // inner black bo
 context.stroke();
 context.fill(); // draw the fill the sq lines
 
-// add text 
-context.font = "45px Sans-Serif";
-context.fillStyle = "blue"; 
-context.strokeStyle = 'green';
-context.strokeText(msg, 60, 100);
-context.fillText(msg, 60, 100);
 
+drawText();
 //stick figure
 context.strokeStyle = '#FFFFFF';
 context.lineWidth = 2;
@@ -52,4 +48,4 @@ canGridHorizontal();
 
 context.stroke();
 
-export{context, canvas};
+export{context, canvas, msg};
