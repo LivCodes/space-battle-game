@@ -4,6 +4,6 @@ body {
     font-family: sans-serif; 
 }
 
-canvas {
+#space-battle {
     background-color: dimgrey;
 }
