@@ -1,3 +1,4 @@
+import { canGridVertical, canGridHorizontal } from "./canvas-grid.js";
 const msg= "Space Battle"
 
 var canvas = document.getElementById("space-battle"); 
@@ -41,3 +42,14 @@ context.stroke();
 
 
 
+
+// Grid drawingcodegoes here
+context.strokeStyle = "#00FF00";
+context.lineWidth = 0.25;
+
+canGridVertical();
+canGridHorizontal();
+
+context.stroke();
+
+export{context, canvas};
